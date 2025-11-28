@@ -1,0 +1,120 @@
+/* reuse admin styles plus vendor specifics */
+.vendor-wrap {
+    display: flex;
+    min-height: 100vh;
+}
+
+.vendor-sidebar {
+    width: 220px;
+    background: #0b3b4a;
+    color: #fff;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.vendor-sidebar h2 {
+    margin: 0 0 8px 0;
+}
+
+.vendor-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.vendor-sidebar button {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 8px;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.vendor-main {
+    flex: 1;
+    padding: 20px;
+    background: #f9fafb;
+}
+
+.add-product-form,
+.profile-form {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 720px;
+}
+
+.add-product-form input,
+.add-product-form textarea,
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.product-card-admin {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card-admin .img-wrap {
+    height: 160px;
+    overflow: hidden;
+}
+
+.product-card-admin img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-card-admin .info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.product-card-admin .actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* small responsive */
+@media (max-width:800px) {
+    .vendor-wrap {
+        flex-direction: column;
+    }
+
+    .vendor-sidebar {
+        width: 100%;
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+    }
+}
